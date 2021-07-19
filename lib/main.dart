@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       
       darkTheme: ThemeData(primarySwatch: Colors.indigo,
-      fontFamily: GoogleFonts.lato().fontFamily,
+      fontFamily: GoogleFonts.lato().fontFamily, 
+      // textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.white, displayColor: Colors.white54),
       appBarTheme: AppBarTheme(
         color: Colors.indigo,
         elevation: 0.0,
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       )
       ),
       
-      initialRoute: "MyRoutes.homeRoute",
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
