@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/pages/home_page.dart';
 import 'package:ecommerce_app/pages/login_page.dart';
 import 'package:ecommerce_app/utils/routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,11 +16,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       
       themeMode: ThemeMode.dark,
-      darkTheme: ThemeData(primarySwatch: Colors.green,
+      
+      darkTheme: ThemeData(primarySwatch: Colors.indigo,
       fontFamily: GoogleFonts.lato().fontFamily,
+      appBarTheme: AppBarTheme(
+        color: Colors.indigo,
+        elevation: 0.0,
+        iconTheme: IconThemeData(color: Colors.white),
+        // textTheme: Theme.of(context).textTheme,
+      )
       ),
       
-      initialRoute: "/",
+      initialRoute: "MyRoutes.homeRoute",
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
